@@ -1,10 +1,15 @@
-## Información sobre Desafio 10
+## Información sobre Practica Integradora 3
+
+Se agrego la posibilidad de recuperar y cambiar la contraseña, para ello se creo la ruta **http://localhost:8080/view/olvido** alli se debe proporcionar un email valido que este asociado a alguna de las cuentas de usuario creada y le llegara un email con un link 
+**http://localhost:8080/view/recuperar/:token** que abrira un formulario que permite escribir una nueva contraseña, la misma no debe ser igual a la anterior, ademas este link caducara pasada la hora.
+
+Ademas se agregaron al esquema de User el rol "PREMIUM" y a productos el campo "owner" con el email del usuario.
+
+## Temas de clases pasadas
 
 Se agrego la libreria **Logger Winston** para trabajar con los logs del backend, para ello cree un archivo "loggers.js" en la carpeta "utils" donde se crea y configuran los distintos niveles de error, ademas deje la posibilidad de generar logs en consola, para ello hay que configurar la variable de entorno MODE con el valor "development", en caso contrario se almacenaran todos en archivos, estos ultimos se generaran en la carpeta logs, uno para logs generales llamado "general.log" y otro para errores llamado "errors.log".
 
 Ademas cree una ruta **http://localhost:8080/loggerTest** que permite probar cada uno de los niveles de error.
-
-## Temas de clases pasadas
 
 Se agrego la ruta **http://localhost:8080/mockingproducts** la misma genera y devuelve una lista de 100 productos con los mismos 
 campos del modelo Product.
